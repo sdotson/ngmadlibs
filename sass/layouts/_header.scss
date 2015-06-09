@@ -1,0 +1,52 @@
+/* Header */
+.header {
+	text-align: center;
+	border-bottom: 2px solid #000;
+}
+
+.logo {
+	width: 375px;
+	margin-top: 20px;
+
+	@media screen and (max-width: 900px) {
+		width: 200px;
+	}
+
+	@media screen and (max-width: 500px) {
+		width: 100px;
+		margin-top: 5px;
+	}
+}
+
+.happyface {
+	@media screen and (max-width: 900px) {
+		width: 120px;
+	}
+
+	@media screen and (max-width: 500px) {
+		width: 50px
+	}
+}
+
+.img-wrapper {
+	float: left;
+	padding: 15px 30px;
+	border-right: 2px solid #000;
+
+	@media screen and (max-width: 900px) {
+		padding: 10px 20px;
+	}
+}
+
+h1	{
+	font-size: 80px;
+
+	@media screen and (max-width: 900px) {
+		font-size: 40px;
+	}
+
+	@media screen and (max-width: 500px) {
+		font-size: 24px;
+		margin-bottom: 0px;
+	}
+}

@@ -1,0 +1,10 @@
+.content-width {
+  width:960px;
+  position: relative;
+  margin: auto;
+  border: 2px solid #000;
+
+  @media screen and (max-width: 990px) {
+  	width: auto;
+  }
+}
