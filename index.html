@@ -11,8 +11,8 @@
 		<![endif]-->
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
 	</head>
-	<body ng-app=''>
-		<div class="content-width">
+	<body ng-app='myApp'>
+		<div class="content-width" ng-controller="MyCtrl" ng-init="changeGender()">
 			<header class="clearfix header">
 				<div class="img-wrapper">
 					<img src="images/mad-lib-happy-face.png" class="happyface">
@@ -23,41 +23,49 @@
 			<section class="clearfix provide-words">
 				<h2>Provide the following words:</h2>
 				<form ng-model="words" name="form">
-					<div class="form-item">
-						<input type="text" ng-model="maleName" ng-init="maleName = 'Male name'">
+					<div class="form-item form-item-full">
+						<label>Gender</label>
+						<select ng-model="gender" ng-change="changeGender()">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="jobTitle" ng-init="jobTitle = 'Job Title'">
+						<input type="text" ng-model="name">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="tediousTask" ng-init="tediousTask = 'Tedious task'">
+						<input type="text" ng-model="jobTitle">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="dirtyTask" ng-init="dirtyTask = 'Dirty task'">
+						<input type="text" ng-model="tediousTask">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="celebrity" ng-init="celebrity = 'Celebrity'">
+						<input type="text" ng-model="dirtyTask">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="uselessSkill"  ng-init="uselessSkill = 'Useless skill'">
+						<input type="text" ng-model="celebrity">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="obnoxiousCelebrity" ng-init="obnoxiousCelebrity = 'Obnoxious celebrity'">
+						<input type="text" ng-model="uselessSkill" >
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="hugeNumber" ng-init="hugeNumber = 'Huge number'">
+						<input type="text" ng-model="obnoxiousCelebrity">
 					</div>
 					<div class="form-item">
-						<input type="text" ng-model="adjective" ng-init="adjective = 'adjective'">
+						<input type="text" ng-model="hugeNumber">
+					</div>
+					<div class="form-item">
+						<input type="text" ng-model="adjective">
 					</div>
 				</form>
 			</section>
 			<section class="output">
-				<p><span class="dynamic-text">{{maleName}}</span> was a <span class="dynamic-text">{{jobTitle}}</span> who loved technology. Although he loved parts of his job he absolutely hated <span class="dynamic-text">{{tediousTask}}</span> and <span class="dynamic-text">{{dirtyTask}}</span>. So, <span class="dynamic-text">{{maleName}}</span> met with his life mentor <span class="dynamic-text">{{celebrity}}</span> who told him to learn how to <span class="dynamic-text">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="dynamic-text">{{uselessSkill}}</span> so he studied programming instead.</p>
-				<p>What a great decision! With his new skills, <span class="dynamic-text">{{maleName}}</span> build a(n) <span class="dynamic-text">{{adjective}}</span> robot named <span class="dynamic-text">{{obnoxiousCelebrity}}</span> that not only loved <span class="dynamic-text">{{dirtyTask}}</span> but did it <span class="dynamic-text">{{hugeNumber}}</span> faster.
+				<p><span class="dynamic-text">{{name}}</span> was a <span class="dynamic-text">{{jobTitle}}</span> who loved technology. Although {{genderSubject}} loved parts of {{genderPossessive}} job {{genderSubject}} absolutely hated <span class="dynamic-text">{{tediousTask}}</span> and <span class="dynamic-text">{{dirtyTask}}</span>. So, <span class="dynamic-text">{{name}}</span> met with {{genderPossessive}} life mentor <span class="dynamic-text">{{celebrity}}</span> who told {{genderObject}} to learn how to <span class="dynamic-text">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="dynamic-text">{{uselessSkill}}</span> so {{genderSubject}} studied programming instead.</p>
+				<p>What a great decision! With {{genderPossessive}} new skills, <span class="dynamic-text">{{name}}</span> built a(n) <span class="dynamic-text">{{adjective}}</span> robot named <span class="dynamic-text">{{obnoxiousCelebrity}}</span> that not only loved <span class="dynamic-text">{{dirtyTask}}</span> but did it <span class="dynamic-text">{{hugeNumber}}</span> faster.
 				</p>
 			</section>
 		</div>
 		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
