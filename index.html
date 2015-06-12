@@ -32,31 +32,61 @@
 							</select>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.name" placeholder="name" required>
+							<input type="text" ng-model="data.name" name="name" placeholder="name" required>
+							<div class="error-message" ng-if="myForm.name.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.jobTitle" placeholder="job title" required>
+							<input type="text" ng-model="data.jobTitle" name="jobTitle" placeholder="job title" required>
+							<div class="error-message" ng-if="myForm.jobTitle.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.tediousTask" placeholder="tedious task" required>
+							<input type="text" ng-model="data.tediousTask" name="tediousTask" placeholder="tedious task" required>
+							<div class="error-message" ng-if="myForm.tediousTask.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.dirtyTask" placeholder="dirty task"  required>
+							<input type="text" ng-model="data.dirtyTask" name="dirtyTask" placeholder="dirty task"  required>
+							<div class="error-message" ng-if="myForm.dirtyTask.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.celebrity" placeholder="celebrity" required>
+							<input type="text" ng-model="data.celebrity" name="celebrity" placeholder="celebrity" required>
+							<div class="error-message" ng-if="myForm.celebrity.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.uselessSkill" placeholder="useless skill"  required>
+							<input type="text" ng-model="data.uselessSkill" name="uselessSkill" placeholder="useless skill" required>
+							<div class="error-message" ng-if="myForm.uselessSkill.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.obnoxiousCelebrity" placeholder="obnoxious celebrity" required>
+							<input type="text" ng-model="data.obnoxiousCelebrity" name="obnoxiousCelebrity" placeholder="obnoxious celebrity" required>
+							<div class="error-message" ng-if="myForm.obnoxiousCelebrity.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="number" ng-model="data.hugeNumber" placeholder="huge number" required>
+							<input type="number" ng-model="data.hugeNumber" name="hugeNumber" placeholder="huge number" required>
+							<div class="error-message" ng-if="myForm.hugeNumber.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
+							<div class="error-message" ng-if="myForm.hugeNumber.$error.number && myForm.$submitted">
+								This value must be a number.
+							</div>
 						</div>
 						<div class="form-item">
-							<input type="text" ng-model="data.adjective" placeholder="adjective" required>
+							<input type="text" ng-model="data.adjective" name="adjective" placeholder="adjective" required>
+							<div class="error-message" ng-if="myForm.adjective.$error.required && myForm.$submitted">
+								This field is required.
+							</div>
 						</div>
 					</div>
 					<div class="clearfix form-item-full">
