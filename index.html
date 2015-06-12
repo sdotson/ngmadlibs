@@ -23,42 +23,44 @@
 			<section class="clearfix provide-words" ng-show="activeView === 'form'">
 				<h2>Provide the following words:</h2>
 				<form ng-model="data.words" placeholder="words" name="myForm" novalidate ng-submit="submit()">
-					<div class="form-item form-item-full">
-						<label>Gender</label>
-						<select ng-model="gender" ng-change="changeGender()">
-							<option value="Male">Male</option>
-							<option value="Female">Female</option>
-						</select>
+					<div class="clearfix main-fields">
+						<div class="form-item form-item-full">
+							<label>Gender</label>
+							<select ng-model="gender" ng-change="changeGender()">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.name" placeholder="name" required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.jobTitle" placeholder="job title" required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.tediousTask" placeholder="tedious task" required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.dirtyTask" placeholder="dirty task"  required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.celebrity" placeholder="celebrity" required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.uselessSkill" placeholder="useless skill"  required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.obnoxiousCelebrity" placeholder="obnoxious celebrity" required>
+						</div>
+						<div class="form-item">
+							<input type="number" ng-model="data.hugeNumber" placeholder="huge number" required>
+						</div>
+						<div class="form-item">
+							<input type="text" ng-model="data.adjective" placeholder="adjective" required>
+						</div>
 					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.name" placeholder="name" required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.jobTitle" placeholder="job title" required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.tediousTask" placeholder="tedious task" required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.dirtyTask" placeholder="dirty task"  required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.celebrity" placeholder="celebrity" required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.uselessSkill" placeholder="useless skill"  required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.obnoxiousCelebrity" placeholder="obnoxious celebrity" required>
-					</div>
-					<div class="form-item">
-						<input type="number" ng-model="data.hugeNumber" placeholder="huge number" required>
-					</div>
-					<div class="form-item">
-						<input type="text" ng-model="data.adjective" placeholder="adjective" required>
-					</div>
-					<div class="form-item submit-wrapper">
-						<input type="submit" value="Generate my Madlib">
+					<div class="clearfix form-item-full">
+						<input type="submit" value="Generate my Madlib" class="btn">
 					</div>
 				</form>
 			</section>
@@ -66,6 +68,9 @@
 				<p><span class="dynamic-text">{{data.name}}</span> was a <span class="dynamic-text">{{data.jobTitle}}</span> who loved technology. Although {{genderSubject}} loved parts of {{genderPossessive}} job {{genderSubject}} absolutely hated <span class="dynamic-text">{{data.tediousTask}}</span> and <span class="dynamic-text">{{data.dirtyTask}}</span>. So, <span class="dynamic-text">{{data.name}}</span> met with {{genderPossessive}} life mentor <span class="dynamic-text">{{data.celebrity}}</span> who told {{genderObject}} to learn how to <span class="dynamic-text">{{data.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="dynamic-text">{{data.uselessSkill}}</span> so {{genderSubject}} studied programming instead.</p>
 				<p>What a great decision! With {{genderPossessive}} new skills, <span class="dynamic-text">{{data.name}}</span> built a(n) <span class="dynamic-text">{{data.adjective}}</span> robot named <span class="dynamic-text">{{data.obnoxiousCelebrity}}</span> that not only loved <span class="dynamic-text">{{data.dirtyTask}}</span> but did it <span class="dynamic-text">{{data.hugeNumber}}</span> faster.
 				</p>
+				<div class="clearfix form-item-full">
+					<button class="btn" ng-click="reset()">Start Over</button>
+				</div>
 			</section>
 		</div>
 		<script src="bower_components/angular/angular.min.js"></script>
