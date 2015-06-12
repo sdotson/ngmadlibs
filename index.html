@@ -13,7 +13,6 @@
 	</head>
 	<body ng-app='myApp'>
 		<div class="content-width" ng-controller="MyCtrl" ng-init="changeGender()">
-			{{activeView}}
 			<header class="clearfix header">
 				<div class="img-wrapper">
 					<img src="images/mad-lib-happy-face.png" class="happyface">
@@ -21,7 +20,7 @@
 				<img src="images/ng-mad-libs-logo.png" class="logo">
 				<h1>Automate This!</h1>
 			</header>
-			<section class="clearfix provide-words" ng-show="activeView = 'form'">
+			<section class="clearfix provide-words" ng-show="activeView === 'form'">
 				<h2>Provide the following words:</h2>
 				<form ng-model="data.words" placeholder="words" name="myForm" novalidate ng-submit="submit()">
 					<div class="form-item form-item-full">
@@ -63,9 +62,9 @@
 					</div>
 				</form>
 			</section>
-			<section class="output" ng-hide="activeView = 'form'">
-				<p><span class="dynamic-text">{{data.name}}</span> was a <span class="dynamic-text">{{data.jobTitle}}</span> who loved technology. Although {{data.genderSubject}} loved parts of {{data.genderPossessive}} job {{data.genderSubject}} absolutely hated <span class="dynamic-text">{{data.tediousTask}}</span> and <span class="dynamic-text">{{data.dirtyTask}}</span>. So, <span class="dynamic-text">{{data.name}}</span> met with {{data.genderPossessive}} life mentor <span class="dynamic-text">{{data.celebrity}}</span> who told {{data.genderObject}} to learn how to <span class="dynamic-text">{{data.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="dynamic-text">{{data.uselessSkill}}</span> so {{data.genderSubject}} studied programming instead.</p>
-				<p>What a great decision! With {{data.genderPossessive}} new skills, <span class="dynamic-text">{{data.name}}</span> built a(n) <span class="dynamic-text">{{data.adjective}}</span> robot named <span class="dynamic-text">{{data.obnoxiousCelebrity}}</span> that not only loved <span class="dynamic-text">{{data.dirtyTask}}</span> but did it <span class="dynamic-text">{{data.hugeNumber}}</span> faster.
+			<section class="output" ng-hide="activeView === 'form'">
+				<p><span class="dynamic-text">{{data.name}}</span> was a <span class="dynamic-text">{{data.jobTitle}}</span> who loved technology. Although {{genderSubject}} loved parts of {{genderPossessive}} job {{genderSubject}} absolutely hated <span class="dynamic-text">{{data.tediousTask}}</span> and <span class="dynamic-text">{{data.dirtyTask}}</span>. So, <span class="dynamic-text">{{data.name}}</span> met with {{genderPossessive}} life mentor <span class="dynamic-text">{{data.celebrity}}</span> who told {{genderObject}} to learn how to <span class="dynamic-text">{{data.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="dynamic-text">{{data.uselessSkill}}</span> so {{genderSubject}} studied programming instead.</p>
+				<p>What a great decision! With {{genderPossessive}} new skills, <span class="dynamic-text">{{data.name}}</span> built a(n) <span class="dynamic-text">{{data.adjective}}</span> robot named <span class="dynamic-text">{{data.obnoxiousCelebrity}}</span> that not only loved <span class="dynamic-text">{{data.dirtyTask}}</span> but did it <span class="dynamic-text">{{data.hugeNumber}}</span> faster.
 				</p>
 			</section>
 		</div>
