@@ -43,13 +43,13 @@ module.exports = function(grunt) {
             options: {
                 livereload: true,
             },
-            scripts: {
+            /*scripts: {
                 files: ['js/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
                 },
-            },
+            },*/
             css: {
                 files: ['sass/*.scss', 'sass/*/*.scss'],
                 tasks: ['sass'],
