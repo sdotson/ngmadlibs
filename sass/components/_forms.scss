@@ -1,15 +1,23 @@
 /* forms */
+::-webkit-input-placeholder { color: #999; } 
+:-moz-placeholder { /* Firefox 18- */ color: #999; } 
+::-moz-placeholder { /* Firefox 19+ */ color: #999; } 
+:-ms-input-placeholder { color: #999; }
+
+
 .form-item {
 	width: 33.3%;
 	float: left;
 	text-align: center;
 	padding: 20px 0px;
+	position: relative;
 
 	@media screen and (max-width: 750px) {
 		width: 100%;
 		float: none;
 		margin-bottom: 21px;
-		padding: 0px;
+		padding: 0px 0px 21px;
+	  margin-bottom: 16px;
 	}
 }
 
@@ -43,6 +51,11 @@ input[type=text], input[type=tel], input[type=number] {
 		background-color: #000;
 		color: #fff;
 		outline: none;
+
+		&::-webkit-input-placeholder { color: #fff; } 
+		&:-moz-placeholder { /* Firefox 18- */ color: #fff; } 
+		&::-moz-placeholder { /* Firefox 19+ */ color: #fff; } 
+		&:-ms-input-placeholder { color: #fff; }
 	}
 
 	@media screen and (max-width: 750px) {
@@ -60,4 +73,14 @@ input[type=text], input[type=tel], input[type=number] {
 			background-color: red;
 		}
 	}
+}
+
+.error-message {
+	color: red;
+	font-weight: bold;
+	position: absolute;
+  bottom: 0px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
 }
