@@ -6,6 +6,7 @@ angular.module('myApp', [])
 		$scope.reset = function() {
 			$scope.data = '';
 			$scope.activeView = 'form';
+			$scope.myForm.$setPristine();
 		};
 
 
