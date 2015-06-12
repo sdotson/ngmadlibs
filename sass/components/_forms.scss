@@ -39,3 +39,15 @@ input[type=text], input[type=tel], input[type=number] {
 		width: 100%;
 	}
 }
+
+/* validation */
+
+.ng-submitted {
+	.ng-invalid {
+		border-color: red;
+
+		&:focus {
+			background-color: red;
+		}
+	}
+}
