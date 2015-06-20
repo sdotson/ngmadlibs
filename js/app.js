@@ -23,10 +23,7 @@ angular.module('myApp', [])
 		};
 
 		$scope.submit = function() {
-			console.log($scope.myForm.$valid);
-			if ($scope.myForm.$valid) {
-				$scope.activeView = "output";
-			};
+			$scope.activeView = "output";
 		};
 
 	});

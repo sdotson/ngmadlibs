@@ -22,7 +22,7 @@
 			</header>
 			<section class="clearfix provide-words" ng-show="activeView === 'form'">
 				<h2>Provide the following words:</h2>
-				<form ng-model="data.words" placeholder="words" name="myForm" novalidate ng-submit="submit()">
+				<form ng-model="data.words" placeholder="words" name="myForm" novalidate ng-submit="myForm.$valid && submit()">
 					<div class="clearfix main-fields">
 						<div class="form-item form-item-full">
 							<label>Gender</label>
