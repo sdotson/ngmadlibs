@@ -2,10 +2,31 @@
 .provide-words {
 	padding: 40px;
 	border-bottom: 2px solid #000;
+	background-color: #fff;
+	-webkit-transition: all 250ms linear;
+	transition: all 250ms linear;
+
+	&.ng-hide {
+		-webkit-transform: scale(3,3);
+		transform: scale(3,3);
+		opacity: 0;
+	}
+
 }
 
 .output {
 	padding: 40px;
+	-webkit-transition: all 500ms linear 100ms;
+	transition: all 500ms linear 100ms;
+	-webkit-transform: scale(1,1);
+	transform: scale(1,1);
+
+	&.ng-hide-remove {
+		opacity: 0;
+		-webkit-transform: scale(3,3);
+		transform: scale(3,3);
+		color: orange;
+	}
 }
 
 .dynamic-text {

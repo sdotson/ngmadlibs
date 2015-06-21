@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngAnimate'])
 	.controller('MyCtrl', function($scope) {
 		$scope.gender = "Male";
 		$scope.activeView = 'form';

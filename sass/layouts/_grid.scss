@@ -3,6 +3,8 @@
   position: relative;
   margin: auto;
   border: 2px solid #000;
+  -webkit-transition: all 500ms linear;
+	transition: all 500ms linear;
 
   @media screen and (max-width: 990px) {
   	width: auto;
