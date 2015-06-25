@@ -11,7 +11,7 @@ angular.module('myApp', ['ngAnimate'])
 
 
 		$scope.changeGender = function() {
-			if ($scope.gender == "Male") {
+			if ($scope.gender === "Male") {
 				$scope.genderSubject = "he";
 				$scope.genderPossessive = "his";
 				$scope.genderObject = "him";
